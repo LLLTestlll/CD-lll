@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动滑块解锁</title>
+	<style>
+	*{ margin: 0; padding: 0;}
+	body{ background: pink;}
+	.move {
+		width: 480px;
+		height: 204px;
+		font-family: 微软雅黑;
+		font-weight: bold;
+		float: left;
+		font-size: 46px; 
+		text-align: center; 
+		line-height: 204px; 
+		text-decoration: none; 
+		background: -webkit-linear-gradient(-45deg,#fff 0 ,#fff 10%,#000 20%,#000 30%);
+		-webkit-background-clip:text; 
+		color: rgba(0,0,0,0);}
+	</style>
+	<script>
+	window.onload = function(){
+		
+		var oMove = document.querySelector('.move');
+		var n=0;
+		function clock(n){
+			oMove.style.background='-webkit-linear-gradient(-45deg,#000 '+n+'%,#fff '+(n+10)+'%,#000 '+(n+20)+'%)'
+			oMove.style.WebkitBackgroundClip='text';
+		}
+		clock(n)
+		setInterval(function(){
+			n++;
+			clock(n%90)
+		},30);
+	}
+	</script>
+</head>
+<body>
+	<div class="move">		
+		移动滑块解锁
+	</div>
+</body>
+</html>
