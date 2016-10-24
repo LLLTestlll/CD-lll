@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{ margin:0; padding:0;}
+	body{ background:url(bg.jpg) no-repeat;overflow:hidden;}
+	.box{  margin-left: 50px; float: left; position: relative; width:200px; height:200px; margin-top: 400px;}
+	.cd{ width:194px; height:194px; background:url(cd.png) no-repeat; position:absolute; left:0; top:0;-webkit-transition:1s all ease;}
+	.pic{ width:200px; height:200px; background:url(img_01.jpg) no-repeat;position:absolute; left:0; top:0;  -webkit-transition:2s all ease;}
+	.box:hover .pic{
+		-webkit-transform:translate(0,50px);
+	}
+	.box:hover .cd{
+		-webkit-transform:translate(0,-20px) rotate(720deg);
+	}
+</style>
+<script>
+
+</script>
+</head>
+
+<body>
+	<div class="box">
+    	<div class="cd">
+        </div>
+        <div class="pic">
+        </div>
+    </div>
+	<div class="box">
+    	<div class="cd">
+        </div>
+        <div class="pic">
+        </div>
+    </div>
+    <div class="box">
+    	<div class="cd">
+        </div>
+        <div class="pic">
+        </div>
+    </div>
+    <div class="box">
+    	<div class="cd">
+        </div>
+        <div class="pic">
+        </div>
+    </div>
+</body>
+</html>
